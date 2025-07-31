@@ -85,6 +85,7 @@ The error is located in the `trigger_error()` function in `app.py`:
 @app.route('/trigger-error')
 def trigger_error():
     """Endpoint that generates an error when enabled."""
+This line was added by the diff.
     global error_enabled
     
     if error_enabled:
