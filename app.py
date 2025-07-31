@@ -66,6 +66,8 @@ def trigger_error():
     """Endpoint that generates an error when enabled."""
     global error_enabled
     
+        #result = undefined_variable + "This should cause an error"
+        result1 = undefined_variable + "This should cause an error"
     if error_enabled:
         # INTENTIONAL ERROR: This will cause a NameError because 'undefined_variable' is not defined
         # This is the error that can be fixed in a PR
