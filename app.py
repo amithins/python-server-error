@@ -66,6 +66,8 @@ def trigger_error():
     """Endpoint that generates an error when enabled."""
     global error_enabled
     
+        #result = undefined_variable + "This should cause an error"
+        result1 = undefined_variable + "This should cause an error"
     if error_enabled:
         # INTENTIONAL ERROR: This will cause a NameError because 'undefined_variable' is not defined
         # This is the error that can be fixed in a PR
@@ -114,7 +116,7 @@ def not_found(error):
 def internal_error(error):
     """Handle 500 errors."""
     return jsonify({'error': 'Internal server error'}), 500
-
+    app.run(host='0.0.0.0', port=port, debug=True)
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=True) 
